@@ -2,9 +2,11 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
+  debug: true,
   devtool: 'source-map',
   entry: [
-    'webpack-hot-middleware/client',
+    'eventsource-polyfill',
+    'webpack-hot-middleware/client?reload=true',
     './client/App'
   ],
   output: {
